@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Owl Carousel</title>
+    <!-- Bootstrap -->
+    <link href="owl.carousel.css" rel="stylesheet">
+    <link href="owl.theme.default.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style type="text/css">
+.item {
+    background-color: slateblue;
+    width: auto;
+    height: 200px;
+    text-align: center;
+    color: #FFF;
+    text-align: center;
+}
+</style>
+
+<body>
+    <div class="container">
+        <div class="col-lg-12">
+            <div id="sync1" class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="text-center"> Carousel box 1 </div>
+                </div>
+                <div class="item">
+                    <div class="text-center"> Carousel box 2 </div>
+                </div>
+                <div class="item">
+                    <div class="text-center"> Carousel box 3 </div>
+                </div>
+                <div class="item">
+                    <div class="text-center"> Carousel box 4 </div>
+                </div>
+                <div class="item">
+                    <div class="text-center"> Carousel box 5 </div>
+                </div>
+                <div class="item">
+                    <div class="text-center"> Carousel box 6 </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="owl.carousel.min.js">
+    </script>
+    <script>
+    $(document).ready(function() {
+        var sync1 = $("#sync1");
+        sync1.owlCarousel({
+            items: 3,
+            slideSpeed: 0.5,
+            nav: true,
+            margin: 20,
+            autoplay: true,
+            dots: true,
+            loop: true,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true
+                },
+                600: {
+                    items: 3,
+                    nav: false
+                },
+            }
+        });
+    });
+    </script>
+</body>
+
+</html>
